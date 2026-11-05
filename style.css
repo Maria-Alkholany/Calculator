@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: xx-large;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f0fa;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 3px;
+  height: 80%;
+  width: 80%;
+  background-color: #f3f0fa;
+  border-radius: 15px;
+}
+
+.num {
+  background-color: #e6e0ef;
+  color: #40374d;
+  border-radius: 10px;
+  border: 1px solid #e6e0ef;
+}
+.num:hover {
+  background-color: #e7ddf8;
+}
+
+.opration {
+  background-color: #e7ddf8;
+  color: #7955ad;
+  border-radius: 10px;
+  border: 1px solid #e6e0ef;
+}
+.opration:hover {
+  background-color: #9b78ce;
+  color: white;
+}
+
+#input {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: 3px;
+  border: 1px solid #e6e0ef;
+}
+#input:focus{
+  border: 1px solid #9b78ce;
+}
+
+.one {
+  grid-column: 1;
+  grid-row: 2;
+}
+.two {
+  grid-column: 2;
+  grid-row: 2;
+}
+.three {
+  grid-column: 3;
+  grid-row: 2;
+}
+.four {
+  grid-column: 1;
+  grid-row: 3;
+}
+.five {
+  grid-column: 2;
+  grid-row: 3;
+}
+.six {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.seven {
+  grid-column: 1;
+  grid-row: 4;
+}
+.eight {
+  grid-column: 2;
+  grid-row: 4;
+}
+.nine {
+  grid-column: 3;
+  grid-row: 4;
+}
+.zero {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.equal {
+  grid-column: 3;
+  grid-row: 5;
+  background-color: #e7ddf8;
+  color: #7955ad;
+}
+.add {
+  grid-column: 4;
+  grid-row: 2;
+}
+.sub {
+  grid-column: 4;
+  grid-row: 3;
+}
+.divid {
+  grid-column: 4;
+  grid-row: 4;
+}
+.multi {
+  grid-column: 4;
+  grid-row: 5;
+}
+.delete {
+  grid-row: 5;
+  grid-column: 1;
+  background-color: #9b78ce;
+  color: white;
+}
+.delete:hover{
+  background-color: #e7ddf8;
+  color: #7955ad;
+}
+
+/* .fa-delete-left {
+  font-size: 30px;
+  color: white;
+}
+.fa-delete-left:hover {
+  color: #7955ad;
+} */
