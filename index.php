@@ -1,58 +1,65 @@
 <?php
+
 $display = $_POST["display"]??"";
 $firstNumber =$_POST["firstNumber"]?? "";
 $oprator =$_POST["oprator"]?? "";
 $secondNumber="";
 
-if(isset($_POST["num"])){
+if(isset($_POST["num"]))
+{
     $display .= $_POST["num"];
 }
 elseif(isset($_POST["opration"]))
 {
     $display .= " " . $_POST["opration"]." ";
 }
-elseif(isset($_POST["equal"])){
-$parts = explode(" ",trim($display));
-if(count($parts)>=3){
-    $firstNumber=(float)$parts[0];
-    $oprator = $parts[1];
-    $secondNumber = (float)$parts[2];
+elseif(isset($_POST["equal"]))
+{
+    $parts = explode(" ",trim($display));
+
+    if(count($parts)>=3)
+        {
+             $firstNumber=(float)$parts[0];
+             $oprator = $parts[1];
+             $secondNumber = (float)$parts[2];
 
 
-if($oprator=="+"){
-    $display= $firstNumber + $secondNumber;
-}
-elseif($oprator=="-")
-    {
-        $display=$firstNumber - $secondNumber;
-    }
-
-elseif($oprator=="*")
-    {
-        $display=$firstNumber * $secondNumber;
-    }
-    elseif($oprator=="/")
-    {
-        if($secondNumber==0){
-            $display="Error";
+             if($oprator=="+")
+                {
+                    $display= $firstNumber + $secondNumber;
+                }
+            elseif($oprator=="-")
+                {
+                    $display=$firstNumber - $secondNumber;
+                }
+            elseif($oprator=="*")
+                {
+                    $display=$firstNumber * $secondNumber;
+                }
+            elseif($oprator=="/")
+                {
+                    if($secondNumber==0)
+                        {
+                            $display="Error";
+                        }
+                    else{
+                    $display=$firstNumber / $secondNumber;
+                        }
+                }
         }
-        else{
-        $display=$firstNumber / $secondNumber;
-        }
-    }
+    $firstNumber="";
+    $oprator="";
+    $secondNumber="";
 }
-$firstNumber="";
-$oprator="";
-$secondNumber="";
-}
-
-
 elseif(isset($_POST["clear"]))
     {
         $display="";
     }
 ?>
-    <!doctype html>
+
+
+
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -88,9 +95,7 @@ elseif(isset($_POST["clear"]))
         <button type="submit" name="opration" class="opration multi" value="*">x</button>
         <button type="submit" name="opration" class="opration divid" value="/">/</button>
         <button type="submit" name="equal" class="opration equal" value="equal">=</button>
-        <button type="submit" name="clear" class="opration delete">
-          AC
-        </button>
+        <button type="submit" name="clear" class="opration delete">AC</button>
       </div>
     </form>
   </body>
