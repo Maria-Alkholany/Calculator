@@ -22,6 +22,7 @@ body {
   width: 80%;
   background-color: #f3f0fa;
   border-radius: 15px;
+  margin-left: 50px;
 }
 
 .num {
@@ -130,11 +131,3 @@ body {
   background-color: #e7ddf8;
   color: #7955ad;
 }
-
-/* .fa-delete-left {
-  font-size: 30px;
-  color: white;
-}
-.fa-delete-left:hover {
-  color: #7955ad;
-} */
